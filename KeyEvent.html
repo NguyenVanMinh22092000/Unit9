@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KeyEvent</title>
+</head>
+<body onload="doAlready()">
+<img id="do" src='doraemon-4553920_1280.webp' style =" position: relative; top : 0 ; left : 0; height : 200px; width :100px" alt="VanMINH">
+
+<script>
+  function turnLeft() {
+    var element = document.getElementById("do")
+    element.style.left = parseInt(element.style.left)  + 5 + "px"   ;
+  }function turnRight() {
+    var element = document.getElementById("do")
+    element.style.left = parseInt(element.style.left)  - 5 + "px"   ;
+  }function turnUp() {
+    var element = document.getElementById("do")
+    element.style.top = parseInt(element.style.top)  + 5 + "px"   ;
+  }function turnDown() {
+    var element = document.getElementById("do")
+    element.style.top = parseInt(element.style.top)  - 5 + "px"   ;
+  }
+
+      function moveSelection(evt) {
+      switch (evt.keyCode) {
+          case 37:
+              turnLeft();
+              break;
+          case 39:
+              turnRight();
+              break;
+          case 38:
+              turnUp();
+              break;
+          case 40:
+              turnDown();
+              break;
+      }
+  }
+        function doAlready() {
+      window.addEventListener('keydown', moveSelection);
+
+  }
+</script>
+</body>
+</html>

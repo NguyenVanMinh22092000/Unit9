@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+</head>
+<body>
+    <form>
+        <img name="Myimage" src="doraemon-4553920_1280.webp" name="lll" alt="Chrismas" style : width="300px" length="200px">
+        <p>Click here to move the image go right!</p>
+        <button  onclick="moveRight()">Click</button>
+    </form>
+    <script>
+        var station = document.getElementsByName("Myimage")[0];
+        function sta() {
+            station = document.getElementsByName('Myimage')[0];
+            station.style.position = 'relative';
+            station.style.left = '0px';
+        }
+        function moveRight() {
+            station.style.left = parseInt(station.style.left) + 120 + "px";
+        }
+        window.onload = sta;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Onmoutout</title>
+</head>
+<body>
+<p id="a" onmouseover="color()">Click here to change the color of the announcement!</p>
+<script>
+  // way 1
+  // function color() {
+  //   var cooLor = document.getElementById('a').style.color = 'red';
+  // }
+  // function color() {
+  //   var cooLor = document.getElementById('a').style.color = 'yellow';
+  // }
+  // way 2
+  var cooLor = document.getElementById('a');
+  cooLor.addEventListener('color',onmouseover) ;
+  cooLor.addEventListener('color',onmouseout);
+  function color() {
+    var cooLor = document.getElementById('a').style.color = 'red';
+  }
+</script>
+</body>
+</html>

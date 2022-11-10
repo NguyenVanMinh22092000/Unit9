@@ -1,0 +1,20 @@
+table {
+    width:600 px;
+    margin:auto;
+    height:800 px;
+    background:gray;
+    border: 3px solid #429121;
+    padding:10px;
+    border-radius: 20px;
+}
+tr,th {
+    background-color:lightsteelblue;
+    width:100%;
+    padding:100%;
+    font-size:22px;
+
+    margin-top:100%;
+    border-radius:100%;
+    border-color: orange;
+    text-align: center;
+}

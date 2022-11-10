@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OnchangeEvent</title>
+</head>
+<body>
+<p>What vehicle do you have?</p>
+<select name="select" id="select1" onchange="do_Something()">
+  <option value="Bike">Bike</option>
+  <option value="Cruiship">Cruiship</option>
+  <option value="Motobike">Motobike</option>
+  <option value="Automobike">Automobike</option>
+</select>
+<p id="result"></p>
+<script>
+  // method1
+  function do_Something(){
+    var selectValue = document.getElementById("select1").value;
+    document.getElementById("result").innerHTML = selectValue;
+  }
+
+    // method2
+    var selectValue = document.getElementById("select1");
+    selectValue.addEventListener('change', changeValue);
+    function changeValue() {
+        var selectValue = document.getElementById("select1").value;
+        document.getElementById('result').innerHTML = selectValue;
+    }
+</script>
+</body>
+</html>

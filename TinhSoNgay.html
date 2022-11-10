@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TinhSoNgay</title>
+</head>
+<body>
+<lable class="a">Type month</lable>
+<input type="number" id="mmm"> <br>
+<label>Type year</label>
+<input type="number" id="rrr">
+<input type="button" value="TinhSoNga" onclick="countDay()">
+<p id="lll"></p>
+<script>
+    function countDay() {
+        let month = document.getElementById("mmm").value;
+        let year = document.getElementById('rrr').value;
+        let result;
+        result = (month==1 || month==3 || month==4 || month==7 || month==10 || month==12 )? 'there are 31 days':
+    (month==4 || month==6 || month==11 || month==9  )? 'there are 30 days': (year%4==0 && year%100 !=0)?'there are 28 days':
+        (year%100==0 && year%400 ==0)?'there are 28 days': 'there are 29 days' ;
+    document.getElementById('lll').innerHTML = result
+    }
+</script>
+<style>
+    .a {
+        color: antiquewhite; text-align: center;
+    }
+</style>
+
+</body>
+</html>
+<!--<script>-->
+<!--    function ddd() {-->
+
+<!--    }-->
+<!--    var month = document.getElementById('m').value;-->
+<!--    // month = parseInt(month)-->
+<!--    month=3;-->
+<!--    switch (month) {-->
+<!--        case 1:-->
+<!--        case "3":-->
+<!--        case 5:-->
+<!--        case 7:-->
+<!--        case 10:-->
+<!--        case 12:-->
+<!--          document.write('there are 30 days');-->
+<!--          break;-->
+<!--        case 4:-->
+<!--        case 6:-->
+<!--        case 9:-->
+<!--        case 11:-->
+<!--            result = 'there are 30 days'-->
+<!--            break;-->
+<!--        default: result = 'there are 28 or 29 days'-->
+<!--            document.getElementById('dd').innerHTML = result;-->
+<!--    }-->
+
+
+
+
+<!--</script>-->
+

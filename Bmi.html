@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bmi</title>
+</head>
+<body>
+<p id="Minh"></p>
+<script>
+    let weight = parseInt(prompt('type your weight (kg) = '));
+    let height = parseInt(prompt('type your height (m) = '));
+    let bMI;
+    bMI = weight/ (height^2);
+    let message;
+    message = (bMI>=30)? 'Obese': (bMI>=25)? 'Overweight':(bMI>=18.5)? 'normal': 'Underweight';
+    document.getElementById('Minh').innerHTML = 'Your BMI : '+ message;
+</script>
+</body>
+</html>

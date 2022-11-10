@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doreamon</title>
+</head>
+<body>
+<form>
+  <img id="myImage" src="doraemon-4553920_1280.webp" style =" position: relative; top : 0 ; left : 0; height : 200px; width :100px"></img>
+
+  <p>Click here to move the Doreamon toward the right</p>
+  <button name="onclick" onclick="moveRight()">Click me</button>
+</form>
+
+<script>
+
+  var image1 = document.getElementById('myImage');
+  function I1 (){
+    image1 = document.getElementById('myImage');
+    image1.style.position = 'relative';
+    image1.style.left = '0px';
+  }
+  function moveRight() {
+      image1.style.left = parseInt(image1.style.left) + 10 +'px';
+      console.log(image1.style.left)
+  }
+  window.onload = init;
+</script>
+
+</body>
+</html>
